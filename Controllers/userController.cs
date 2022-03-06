@@ -9,20 +9,19 @@ namespace ballfight.Controllers
         public IActionResult Index()
         {
 
-            //ballfightContext context = HttpContext.RequestServices.GetService(typeof(ballfight.Models.ballfightContext)) as ballfightContext;
+           
 
 
-            List<userModel> list = ctx.GetAllUsers();
+            List<User> list = ctx.GetAllUsers();
 
-            //consol
-            //return View(context.GetAllUsers());
+            
             return View(list);
 
         }
 
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        public IActionResult Create([Bind(include: "name, email, password")] userModel user)
+        public IActionResult Create([Bind(include: "name, email, password")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -33,8 +32,7 @@ namespace ballfight.Controllers
 
                 ctx.createUser(name, email, password);
 
-                //users.Add(user);
-                //db.SaveChanges();
+                
                 return RedirectToAction("Index");
             }
 
@@ -43,6 +41,30 @@ namespace ballfight.Controllers
 
         public IActionResult Delete(){
             return View();
+        }
+
+        public IActionResult Login([Bind(include: "email, password")] User user) {
+            var userLocal = HttpContext.Session.GetInt32("_userID");
+            if (userLocal != null) return RedirectToAction("Index", "Home");
+
+   
+                var email = user.email;
+                var password = user.password;
+
+                var i = ctx.Login(email, password);
+
+                if ( i != null)
+                {
+                    HttpContext.Session.SetInt32("_userID", i.id);
+                    return RedirectToAction("Index", "Home");
+                }
+
+                else {
+                    TempData["msg"] = "<script>alert('FALSE');</script>";
+                    return View(user);
+                }
+           
+            return View(user);      
         }
     }
 }

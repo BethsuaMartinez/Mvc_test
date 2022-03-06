@@ -3,7 +3,7 @@ using Xunit;
 
 namespace ballfight.Models
 {
-    public class userModel
+    public class User
     {
 
     
@@ -13,7 +13,6 @@ namespace ballfight.Models
             
             public int id { get; set; }
 
-            [Required(ErrorMessage = "Please enter name")]
             public string name { get; set; }
 
             public string email { get; set; }

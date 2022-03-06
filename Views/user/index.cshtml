@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ballfight.Models.userModel>
+﻿@model IEnumerable<ballfight.Models.User>
 
 @{
     ViewData["Title"] = "index";
@@ -7,13 +7,13 @@
 
 <h1>index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
 
 <p>
     @Html.ActionLink("Create", "Create")
+</p>
+
+<p>
+    @Html.ActionLink("Login", "Login")
 </p>
 
 <table class="table">

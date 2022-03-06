@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\beths\Desktop\project_test\ballfight
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/beths/Desktop/project_test/ballfight/Views/Home/Developers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXZlbG9wZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/beths/Desktop/project_test/ballfight/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +45,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/beths/Desktop/project_test/ballfight/Views/user/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/beths/Desktop/project_test/ballfight/Views/user/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/beths/Desktop/project_test/ballfight/Views/_ViewImports.cshtml]
